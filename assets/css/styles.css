@@ -1,0 +1,89 @@
+div.todo {
+    margin: 0 10px;
+    padding: 0 10px;
+    border-left: 3px solid var(--red-color);
+}
+
+.todo::before {
+  content: 'TODO: ';
+  color: var(--red-color);
+  font-weight: bold;
+}
+
+/*
+ * TODO:
+ *   - move theme, variables & markup in separate files
+ *   - migrate from css to scss
+ */
+
+:root {
+  --background-color: white;
+  --text-color: black;
+  --border-color: black;
+
+  --blue-color: blue;
+  --red-color: red;
+
+  --link-color: var(--blue-color);
+  --visited-link-color: var(--red-color);
+
+  --width-s: 600px;
+  --width-m: 768px;
+  --width-l: 992px;
+  --width-xl: 1200px;
+}
+
+/* @media (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --background-color: #1c1c1c; */
+/*     --text-color: white; */
+/*     --border-color: white; */
+
+/*     --blue-color: rgb(113, 170, 235); */
+/*     --red-color: lightpink; */
+/*   } */
+/* } */
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-bottom: 50px;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    margin: 0 20%;
+  }
+}
+
+nav {
+  border-bottom: 2px solid var(--border-color);
+  padding: 5px;
+}
+
+nav a {
+  padding-right: 15px;
+}
+
+#title {
+  margin: auto;
+  text-align: center;
+
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--link-color);
+}
+
+div.break {
+    width: 60px;
+    border-bottom: 2px solid black;
+    margin: 24px auto;
+}
+
